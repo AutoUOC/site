@@ -1,0 +1,26 @@
+{
+  "name": "autouoc-site",
+  "version": "1.0.0",
+  "description": "Website  for AutoUOC",
+  "main": "node src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AutoUOC/autouoc-site.git"
+  },
+  "author": "bremea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AutoUOC/autouoc-api/issues"
+  },
+  "homepage": "https://github.com/AutoUOC/autouoc-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9"
+  },
+  "engines": {
+    "node": "12.x"
+  }
+}
