@@ -1,4 +1,8 @@
 {
+  "dependencies": {
+      "express": "^4.17.1"
+    }
+  }
   "name": "autouoc-site",
   "version": "1.0.0",
   "description": "Website  for AutoUOC",
