@@ -1,4 +1,9 @@
 body {
-  background-color: lightblue;
+  background-color: #1aafd0;
+  text-align: center;
+}
+
+main {
+  color: white;
   text-align: center;
 }
