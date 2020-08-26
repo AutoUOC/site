@@ -1,9 +1,265 @@
 body {
-  background-color: #1aafd0;
-  text-align: center;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
-main {
-  color: white;
-  text-align: center;
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+    transition: .25s;
+}
+
+.nav {
+    height: 7.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5vw;
+    background-color: #1aafd0;
+    box-shadow: 0 2px 3px rgba(34, 25, 25, 0.3);
+}
+
+.nav > img {
+    height: 85%;
+}
+
+.nav > a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 0 5vw;
+}
+
+.nav > a:hover {
+    text-decoration: underline;
+}
+
+.nav > .login {
+    border: 4px solid #1790ac;
+    padding: 1vh 2vw;
+    border-radius: 5px;
+}
+
+.nav > .login:hover {
+    background-color: #1790ac;
+}
+
+.filler {
+    flex-grow: 1;
+}
+
+.header {
+    display: flex;
+}
+
+.cleft {
+    flex-grow: 1;
+    margin-right: 10vw;
+    display: flex;
+    margin: 5vh 5vw;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 82.5;
+}
+
+.cright {
+    border-radius: 10px 10px 0 0;
+    min-width: 50%;
+    height: 100%;
+    margin: 5vh 5vw;
+    box-shadow: 0 2px 3px rgba(34, 25, 25, 0.3);
+}
+
+.posthead {
+    display: flex;
+    background-color: #1aafd0;
+    justify-content: space-between;
+    padding: 3px 9px;
+    border-radius: 10px 10px 0 0;
+}
+
+.posthead > * {
+    color: white;
+}
+
+.postwrapper {
+    display: flex;
+}
+
+.postright {
+    display: flex;
+    background-color: #f7f7f7;
+    padding: 2vh 2vw;
+    flex-direction: column;
+}
+
+.postright > img {
+    height: 150px;
+    width: 150px;
+    margin: 10px 0;
+}
+
+.postright > p {
+    margin: 3px;
+    font-size: .85rem;
+}
+
+.postright > .postauthor {
+    font-weight: bold;
+}
+
+.postleft {
+    padding: 2vh 2vw;
+    background-color: white;
+    width: 100%;
+}
+
+.postleft > * {
+    font-size: .85rem;
+}
+
+.cleft > h1 {
+    font-size: 4.5rem;
+    color: white;
+}
+
+.mbtn {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(34, 25, 25, 0.3);
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    margin: 0 10px;
+}
+
+.mbtn:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.5);
+}
+
+.sbtn {
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(34, 25, 25, 0.3);
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0 25px;
+    margin: 0 10px;
+}
+
+.sbtn:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.5);
+}
+
+.cleft > p {
+    font-size: 1.25rem;
+    margin: 0 10px;
+    color: white;
+}
+
+.buttonwrap {
+    display: flex;
+    margin-top: 48.240px;
+}
+
+.content {
+    position: absolute;
+    z-index: 100;
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #1aafd0 20%, #1790ac 80%);
+}
+
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+
+.bgBottom {
+    z-index: 5;
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+
+.waveTop {
+    background-size: 50% 100px;
+}
+
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+
+.waveMiddle {
+    background-size: 50% 120px;
+}
+
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+
+.waveBottom {
+    background-size: 50% 100px;
+}
+
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
 }
