@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static("public"));
 
 // put html in views
-app.get("/", (req, res) {
+app.get("/", (req, res) => {
 res.sendFile(__dirname + "/views/index.html");
 });
 
